@@ -492,6 +492,9 @@ public class CallingAllMethods {
 			re.ClickCreateAcc();
 			re.accreated();
 			re.continueBtn();
+			p.AddtoCart();
+			ca.addtoCarts();
+			
 		}
 }
 }
