@@ -25,6 +25,7 @@ public class Cart_Page {
 	@FindBy(xpath="//div[@class='pull-right']/child::a")public WebElement Conti;
 	@FindBy(xpath="//td[@class='cart_delete']/child::a")public WebElement cross;
 	@FindBy(xpath="//span[@id='empty_cart']/child::p")public WebElement emptymsg;
+	@FindBy(xpath="//a[@class='btn btn-default check_out']")public WebElement invoice;
 	WebDriver driver;
 	public Cart_Page(WebDriver wd)
 	{
@@ -63,7 +64,7 @@ public class Cart_Page {
 	{
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,9000)");
-			Thread.sleep(6000);
+		Thread.sleep(6000);
 		com.sendKeys("shivani");
 		click.click();
 		name.sendKeys("sdfghjkk");
@@ -81,6 +82,10 @@ public class Cart_Page {
 	public void contu()
 	{
 		Conti.click();
+	}
+	public void invoice()
+	{
+		invoice.click();
 	}
 
 }
